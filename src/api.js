@@ -1,15 +1,14 @@
 const express = require("express");
 const serverless = require('serverless-http');
+const BASE_PATH = '/.netlify/functions/api';
+
+//Modules
+const User = require('./routes/user.route');
 
 const app = express();
 
-const router = express.Router();
+//Router
+app.use(express.json());
 
-router.get('/', (req, res) => {
-    res.json({
-        'hello': 'hiiii'
-    })
-});
-
-app.use('/.netlify/functions/api', router);
+app.use(`${BASE_PATH}`, User);
 module.exports.handler = serverless(app);
