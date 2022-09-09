@@ -1,0 +1,28 @@
+{
+  "name": "api-marketplace-yaydoo",
+  "version": "1.0.0",
+  "description": "Marketplace's backend \u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C-end\u001b[Dd\u001b[D\u001b[Df\u001b[\u001b[D-end\u001b[3~\u001b[D\u001b[D\u001b[D\u001b[D-\u001b[C\u001b[C\u001b[C\u001b[C",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node src/index.js",
+    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "build": "./node_modules/.bin/netlify-lambda build src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevingilv/api-marketplace-yaydoo.git"
+  },
+  "author": "Keevyn Gil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevingilv/api-marketplace-yaydoo/issues"
+  },
+  "homepage": "https://github.com/kevingilv/api-marketplace-yaydoo#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3",
+    "netlify-lambda": "^2.0.15",
+    "serverless-http": "^3.0.2"
+  }
+}
