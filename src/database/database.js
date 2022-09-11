@@ -1,11 +1,11 @@
 let Sequelize = require('sequelize');
 const mysql2 = require('mysql2');
 const sequelize = new Sequelize(
-    'marketplace',
-    '08m0pc9h3psz39yb980i',
-    'pscale_pw_f6Rv6IoYMW4DVRfCxkx3WugvtyulbQ6gBQFPJyZrHTu',
+    process.env.DB_NAME,
+    process.env.DB_USER,
+    process.env.DB_PASSWORD,
     {
-        host: 'us-east.connect.psdb.cloud',
+        host: process.env.DB_HOST,
         dialect: 'mysql',
         dialectModule: mysql2,
         dialectOptions: {
@@ -15,14 +15,5 @@ const sequelize = new Sequelize(
         }
     }
 );
-// const sequelize = new Sequelize(
-//     'mydatabase',
-//     'root',
-//     '',
-//     {
-//         host: 'localhost',
-//         dialect: 'mysql'
-//     }
-// );
 
 module.exports = sequelize;
