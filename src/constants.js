@@ -4,4 +4,5 @@ module.exports = {
         data: [],
         message: ''
     },
+    UNEXPECTED_MESSAGE: 'Ocurrió un error inesperado'
 }
