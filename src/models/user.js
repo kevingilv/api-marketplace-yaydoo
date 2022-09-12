@@ -13,7 +13,6 @@ let user = database.define(nametable, {
     email: { type: Sequelize.STRING, allowNull: false },
     password: { type: Sequelize.STRING, allowNull: false },
     isAdmin: { type: Sequelize.BOOLEAN, allowNull: false},
-    // , default: false 
 })
 
 module.exports = user;

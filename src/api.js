@@ -6,14 +6,18 @@ require('dotenv').config();
 
 //Modules
 const User = require('./routes/user.route');
+const Product = require('./routes/product.route');
 
 const app = express();
 
 //Router
 app.use(express.json());
+
 //Configure headers and cors
 app.use(cors());
 
-
+//Config Routes to Modules
 app.use(`${BASE_PATH}`, User);
+app.use(`${BASE_PATH}`, Product);
+
 module.exports.handler = serverless(app);
