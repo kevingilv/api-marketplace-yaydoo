@@ -44,5 +44,20 @@ async function create(req, res) {
     return response;
 }
 
+async function getAll(req, res) {
+    let allProducts = [];
+    let response = {
+        "data": [],
+        "message": '',
+        "success": true,
+        "statusCode": 200,
+    }
+    allProducts = await product.findAll({});
+    console.log('FIND ALL', allProducts)
 
-module.exports = { create }
+    response.data = allProducts;
+    return response;
+}
+
+
+module.exports = { create, getAll }
